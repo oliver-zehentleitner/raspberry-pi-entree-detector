@@ -38,50 +38,50 @@ import time
 import os
 import datetime
 
-def entryDetection():
-    APP_PATH = "/opt/entree-detector/"
-    DOOR_SENSOR_PIN = 4
-    DOOR_BELL_SOUND_FILE = APP_PATH + "bell.mp3"
-    DOOR_TOO_LONG_OPEN_SOUND_FILE = APP_PATH + "close_the_door.mp3"
-    # False = disabled; 120 = play 'close_the_door.mp3' if the door remains open longer than 120 seconds
-    DOOR_TOO_LONG_OPEN_TIME_IN_SECONDS = False
-    RASPBERRY_PI_MAX_VOLUME_PERCENT = 90
-    LOG_FILE = APP_PATH + "door_opening.log"
 
-    isOpen = None
-    lastState = None
-    isOpenSince = None
+def entree_detection():
+    # Config:
+    app_path = "/opt/entree-detector/"
+    door_sensor_pin = 4
+    door_bell_audio_file = app_path + "audio/On The Farm-SoundBible.com.mp3"
+    door_too_long_open_audio_file = app_path + "audio/Turkey Putt-SoundBible.com.mp3"
+    door_too_long_open_time_in_seconds = 600  # False = disabled
+    raspberry_pi_max_volume_percent = 90
+    log_file = app_path + "door_opening.log"
 
     print("Initializing ...")
-    os.system("amixer set PCM,0 " + str(RASPBERRY_PI_MAX_VOLUME_PERCENT) + "%") # set raspberry pi volume
+    is_open = None
+    is_open_since = None
+    os.system("amixer set PCM,0 " + str(raspberry_pi_max_volume_percent) + "%")
     GPIO.setmode(GPIO.BCM)
-    GPIO.setup(DOOR_SENSOR_PIN, GPIO.IN, pull_up_down = GPIO.PUD_UP)
+    GPIO.setup(door_sensor_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
     print("Start entree detection ...")
     while True:
-        lastState = isOpen
-        isOpen = GPIO.input(DOOR_SENSOR_PIN)
-        if lastState == 0 and isOpen == 1:
+        last_state = is_open
+        is_open = GPIO.input(door_sensor_pin)
+        if last_state == 0 and is_open == 1:
             print("Door is open!")
-            isOpenSince = time.time()
-            os.system('mpg321 ' + DOOR_BELL_SOUND_FILE + ' &')
-            f = open(LOG_FILE, "a")
-            f.write("Door opened at " + datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S") + "\r\n")
-            f.close()
-        elif lastState == 1 and isOpen == 1 and isOpenSince is not None and DOOR_TOO_LONG_OPEN_TIME_IN_SECONDS is not False:
-            if (time.time() - isOpenSince) > DOOR_TOO_LONG_OPEN_TIME_IN_SECONDS:
-                os.system('mpg321 ' + DOOR_TOO_LONG_OPEN_SOUND_FILE + ' &')
-                isOpenSince = None
-        elif lastState == 1 and isOpen == 0:
-            f = open(LOG_FILE, "a")
-            f.write("Door closed at " + datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S") + "\r\n")
-            f.close()
+            is_open_since = time.time()
+            os.system('mpg321 ' + door_bell_audio_file + ' &')
+            file = open(log_file, "a")
+            file.write("Door opened at " + datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S") + "\r\n")
+            file.close()
+        elif last_state == 1 and is_open == 1 and is_open_since is not None \
+                and door_too_long_open_time_in_seconds is not False:
+            if (time.time() - is_open_since) > door_too_long_open_time_in_seconds:
+                os.system('mpg321 ' + door_too_long_open_audio_file + ' &')
+                is_open_since = None
+        elif last_state == 1 and is_open == 0:
+            file = open(log_file, "a")
+            file.write("Door closed at " + datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S") + "\r\n")
+            file.close()
         time.sleep(1)
 
 
 def main():
     try:
-        entryDetection()
+        entree_detection()
     except (IOError, KeyboardInterrupt):
         GPIO.cleanup()
 

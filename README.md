@@ -16,22 +16,24 @@ Door entree detector with Raspberry PI written in Python
 ```
 $ sudo apt-get install python-dev python-rpi.gpio mpg321
 ```
-[Download](https://github.com/oliver-zehentleitner/raspberry-pi-entree-detector/archive/master.zip) the repository to
-your raspberry pi to `/opt/entree-detector`.
+[Download the latest release](https://github.com/oliver-zehentleitner/raspberry-pi-entree-detector/releases/latest) to
+`/opt/`.
 
-Make it executeable
+Make it executable
 ```
 $ chmod +x /opt/entree-detector/entree-detector.py
 ```
 
-Add your mp3 files and set them up in the config section of `entree-detector.py`
+Add your [mp3 files](http://soundbible.com) and set them up in the config section of `entree-detector.py`. 
+
+If necessary change the sensor pin number.
 
 Start it:
 ```
 $ ./entree-detector.py
 ```
 
-## Autostart and access to the output
+## Autostart and access to the console output
 Install `screen`:
 ```
 apt install screen
