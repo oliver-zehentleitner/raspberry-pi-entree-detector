@@ -61,3 +61,6 @@ screen -x entree-detector
 
 Dont close screen, just leave it with the detach command `Ctrl+a d`. For more information about screen visit 
 https://linuxize.com/post/how-to-use-linux-screen/#working-with-linux-screen-windows
+
+## Sponsor
+This project is sponsored by [ResiGrass GmbH - Kunstrasen der Prämiumklasse](https://www.kunst-rasen.at)
