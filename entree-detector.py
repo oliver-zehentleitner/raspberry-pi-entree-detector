@@ -41,10 +41,10 @@ import datetime
 
 def entree_detection():
     # Config:
-    app_path = "/opt/entree-detector/"
+    app_path = "/opt/raspberry-pi-entree-detector/"
     door_sensor_pin = 4
-    door_bell_audio_file = app_path + "audio/On The Farm-SoundBible.com.mp3"
-    door_too_long_open_audio_file = app_path + "audio/Turkey Putt-SoundBible.com.mp3"
+    door_bell_audio_file = app_path + "audio/On\ The\ Farm-SoundBible.com.mp3"
+    door_too_long_open_audio_file = app_path + "audio/Turkey\ Putt-SoundBible.com.mp3"
     door_too_long_open_time_in_seconds = 600  # False = disabled
     raspberry_pi_max_volume_percent = 90
     log_file = app_path + "door_opening.log"

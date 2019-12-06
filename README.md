@@ -21,7 +21,7 @@ $ sudo apt-get install python-dev python-rpi.gpio mpg321
 
 Make it executable
 ```
-$ chmod +x /opt/entree-detector/entree-detector.py
+$ chmod +x /opt/raspberry-pi-entree-detector/entree-detector.py
 ```
 
 Add your [mp3 files](http://soundbible.com) and set them up in the config section of `entree-detector.py`. 
@@ -46,7 +46,7 @@ crontab -e
 
 Insert the line:
 ```
-@reboot su - root -c "screen -dm -S entree-detector /opt/entree-detector/entree-detector.py"
+@reboot su - root -c "screen -dm -S entree-detector /opt/raspberry-pi-entree-detector/entree-detector.py"
 ```
 
 Thats it, now restart and see if it works:
