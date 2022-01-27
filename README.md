@@ -76,7 +76,7 @@ contribute follow
 ### Contributors
 [![Contributors](https://contributors-img.web.app/image?repo=oliver-zehentleitner/raspberry-pi-entree-detector)](https://github.com/oliver-zehentleitner/raspberry-pi-entree-detector/graphs/contributors)
 
-We ![love](https://raw.githubusercontent.com/oliver-zehentleitner/raspberry-pi-entree-detector/master/images/misc/heart.png) open source!
+We ![ :heart: ](https://raw.githubusercontent.com/oliver-zehentleitner/raspberry-pi-entree-detector/master/images/misc/heart.png) open source!
 
 ### Donate
 Since you are probably a developer yourself, you will understand very well that the creation of open source software is 
