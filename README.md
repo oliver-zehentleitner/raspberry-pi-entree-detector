@@ -98,6 +98,11 @@ XMR: 85dzsTRh6GRPGVSJoUbFDwAf9uwwAdim1HFpiGshLeKHgj2hVqKtYVPXMZvudioLsuLS1AegkUi
 ZEC: t1WvQMPJMriGWD9qkZGDdE9tTJaawvmsBie
 ```
 
-## You need a Python Dev?
-If you would like to [hire me](https://about.me/oliver-zehentleitner) for a Python project, you can book me through 
-my company [LUCIT](https://www.lucit.tech).
+## Commercial Support
+[![LUCIT](https://www.lucit.tech/files/images/logos/LUCIT-LOGO-TRANS-PLAIN-NEW.png)](https://www.lucit.tech)
+
+***Do you need a developer, operator or consultant?***
+
+Contact [me](https://about.me/oliver-zehentleitner) for a non-binding initial consultation via my company 
+[LUCIT](https://www.lucit.tech) from Vienna (Austria) or via [Telegram](https://t.me/LUCIT_OZ).
+
