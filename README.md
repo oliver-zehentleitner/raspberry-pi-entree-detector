@@ -76,7 +76,7 @@ contribute follow
 ### Contributors
 [![Contributors](https://contributors-img.web.app/image?repo=oliver-zehentleitner/raspberry-pi-entree-detector)](https://github.com/oliver-zehentleitner/raspberry-pi-entree-detector/graphs/contributors)
 
-We ![love](https://s3.gifyu.com/images/heartae002231c41d8a80.png) open source!
+We ![love](https://raw.githubusercontent.com/oliver-zehentleitner/raspberry-pi-entree-detector/master/images/misc/heart.png) open source!
 
 ### Donate
 Since you are probably a developer yourself, you will understand very well that the creation of open source software is 
@@ -96,4 +96,4 @@ ZEC: t1WvQMPJMriGWD9qkZGDdE9tTJaawvmsBie
 ```
 ## You need a Python Dev?
 If you would like to [hire me](https://about.me/oliver-zehentleitner) for a Python project, you can book me through 
-my company [LUCIT](https://www.lucit.dev).
+my company [LUCIT](https://www.lucit.tech).
