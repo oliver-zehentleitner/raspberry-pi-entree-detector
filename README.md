@@ -1,3 +1,4 @@
+[![GitHub Downloads](https://img.shields.io/github/downloads/oliver-zehentleitner/raspberry-pi-entree-detector/total?color=blue)](https://github.com/oliver-zehentleitner/raspberry-pi-entree-detector/releases)
 [![python 3](https://img.shields.io/badge/python-3-blue.svg)](https://www.python.org/downloads/)
 [![stable](https://img.shields.io/badge/status-stable-brightgreen.svg)](https://github.com/oliver-zehentleitner/raspberry-pi-entree-detector/issues)
 [![Donations/week](http://img.shields.io/liberapay/receives/oliver-zehentleitner.svg?logo=liberapay)](https://liberapay.com/oliver-zehentleitner/donate)
