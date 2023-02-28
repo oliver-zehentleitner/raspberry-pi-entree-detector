@@ -89,7 +89,6 @@ If you would like to help me to dedicate my time and energy to this project, eve
 [:heart: Sponsor (GitHub)](https://github.com/sponsors/oliver-zehentleitner/)
 
 ```
-Terra (LUNA, UST, ...): terra1yt34qmmycextztnj9mpt3mnjzqqvl8jtqqq7g9
 BTC: 39fS74fvcGnmEk8JUV8bG6P1wkdH29GtsA
 ETH: 0x1C15857Bf1E18D122dDd1E536705748aa529fc9C
 ```
